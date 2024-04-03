@@ -1,0 +1,1 @@
+"D:\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-5grhxug4378600e3 --n quickstartFunctions --r --project "D:\HiddenCanton" --report_first --report
