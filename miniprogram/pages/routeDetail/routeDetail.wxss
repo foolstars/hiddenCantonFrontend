@@ -1,0 +1,85 @@
+.page_container {
+  background-color: #f5f5f5;
+  padding: 20rpx;
+}
+
+.route_detail {
+  background-color: #fff;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+
+.route_name {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.route_description {
+  font-size: 28rpx;
+  color: #666;
+  margin-top: 10rpx;
+}
+
+.spots_container {
+  margin-top: 20rpx;
+}
+
+.spot_card {
+  background-color: #fff;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+  margin-bottom: 20rpx;
+}
+
+.spot_name {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.spot_location {
+  font-size: 28rpx;
+  color: #666;
+  margin-top: 10rpx;
+}
+
+.comments_container {
+  margin-top: 20rpx;
+}
+
+.comment_card {
+  background-color: #fff;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+  margin-bottom: 20rpx;
+}
+
+.comment_text {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.comment_input_container {
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.comment_input {
+  flex: 1;
+  padding: 10rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 5rpx;
+}
+
+.submit_button {
+  padding: 10rpx 20rpx;
+  background-color: #07C160;
+  color: #fff;
+  border-radius: 5rpx;
+  margin-left: 10rpx;
+}

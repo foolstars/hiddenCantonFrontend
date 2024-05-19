@@ -1,0 +1,30 @@
+<view class="page_container">
+  <block wx:if="{{route}}">
+    <view class="route_detail">
+      <text class="route_name">{{route.name}}</text>
+      <text class="route_description">{{route.description}}</text>
+      <view class="spots_container">
+        <block wx:for="{{route.spots}}" wx:key="id">
+          <view class="spot_card">
+            <text class="spot_name">{{item.name}}</text>
+            <text class="spot_location">{{item.location}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <text>Loading...</text>
+  </block>
+  <view class="comments_container">
+    <block wx:for="{{comments}}" wx:key="id">
+      <view class="comment_card">
+        <text class="comment_text">{{item.text}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="comment_input_container">
+    <input class="comment_input" placeholder="输入评论" value="{{newComment}}" bindinput="onCommentInput"/>
+    <button class="submit_button" bindtap="submitComment">提交</button>
+  </view>
+</view>

@@ -1,4 +1,3 @@
-<!-- pages/me/index.wxml -->
 <view class="page_container">
   <view class="top_bg" />
   <view class="main_content">
@@ -12,38 +11,89 @@
       </block>
     </view>
     <view class="settings_container">
-      <!-- <view class="setting_item">
+      <view class="setting_item" bind:tap="fetchUserList">
         <view class="left">
-          <image class="setting_icon" src="../../images/icons/setting.svg" />
-          <view class="setting_text">个人信息设置</view>
-        </view>
-        <image class="arrow_icon" src="../../images/arrow.svg" />
-      </view> -->
-      <!-- <view class="setting_item">
-        <view class="left">
-          <image class="setting_icon" src="../../images/icons/question.svg" />
-          <view class="setting_text">常见问题</view>
-        </view>
-        <image class="arrow_icon" src="../../images/arrow.svg" />
-      </view> -->
-      <view class="setting_item">
-        <view class="left">
-          <image class="setting_icon" src="../../images/icons/customer-service.svg" />
-          <!-- <view class="setting_text">联系客服</view> -->
-          <button open-type="contact" class="contact-button">
-            联系客服
-          </button>
+          <image class="setting_icon" src="../../images/icons/user-list.svg" />
+          <view class="setting_text">获取用户列表</view>
         </view>
         <image class="arrow_icon" src="../../images/arrow.svg" />
       </view>
-      <view class="setting_item" bind:tap="gotoWxCodePage">
+      <view class="setting_item" bind:tap="fetchSpotList">
         <view class="left">
-          <image class="setting_icon" src="../../images/icons/share.svg" />
-          <view class="setting_text">分享小程序</view>
+          <image class="setting_icon" src="../../images/icons/spot-list.svg" />
+          <view class="setting_text">获取景点列表</view>
+        </view>
+        <image class="arrow_icon" src="../../images/arrow.svg" />
+      </view>
+      <view class="setting_item" bind:tap="fetchRouteList">
+        <view class="left">
+          <image class="setting_icon" src="../../images/icons/route-list.svg" />
+          <view class="setting_text">获取路线列表</view>
+        </view>
+        <image class="arrow_icon" src="../../images/arrow.svg" />
+      </view>
+      <view class="setting_item" bind:tap="fetchMessageList">
+        <view class="left">
+          <image class="setting_icon" src="../../images/icons/message-list.svg" />
+          <view class="setting_text">获取消息列表</view>
         </view>
         <image class="arrow_icon" src="../../images/arrow.svg" />
       </view>
     </view>
   </view>
+  
+  <view class="user_list_container" wx:if="{{userList.length > 0}}">
+    <block wx:for="{{userList}}" wx:key="openid">
+      <view class="user_item">
+        <view>OpenId: {{item.openid}}</view>
+        <view>身份: {{item.identity}}</view>
+        <view>
+          <button class="modify_button" data-openid="{{item.openid}}" data-newidentity="1" bindtap="modifyUserRole">设为学者</button>
+          <button class="modify_button" data-openid="{{item.openid}}" data-newidentity="0" bindtap="modifyUserRole">设为游客</button>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="spot_list_container" wx:if="{{spots.length > 0}}">
+    <block wx:for="{{spots}}" wx:key="id">
+      <view class="spot_item">
+        <view>ID: {{item.id}}</view>
+        <view>名称: {{item.name}}</view>
+        <view>位置: {{item.location}}</view>
+        <view>
+          <button data-id="{{item.id}}" bindtap="deleteSpot">删除</button>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="route_list_container" wx:if="{{routes.length > 0}}">
+    <block wx:for="{{routes}}" wx:key="id">
+      <view class="route_item">
+        <view>ID: {{item.id}}</view>
+        <view>名称: {{item.name}}</view>
+        <view>景点: {{item.spots}}</view>
+        <view>
+          <button data-id="{{item.id}}" bindtap="deleteRoute">删除</button>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="message_list_container" wx:if="{{messages.length > 0}}">
+    <block wx:for="{{messages}}" wx:key="id">
+      <view class="message_item">
+        <view>ID: {{item.id}}</view>
+        <view>用户: {{item.user}}</view>
+        <view>标题: {{item.title}}</view>
+        <view>内容: {{item.text}}</view>
+        <view>
+          <button data-id="{{item.id}}" bindtap="deleteMessage">删除</button>
+        </view>
+      </view>
+    </block>
+  </view>
+  
   <cloud-tip-modal showUploadTipProps="{{showUploadTip}}" />
 </view>

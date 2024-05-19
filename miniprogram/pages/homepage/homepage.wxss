@@ -1,0 +1,60 @@
+.page_container {
+  background-color: #f2f2f2;
+  padding: 20rpx;
+}
+
+.routes_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.route_card {
+  background-color: #ffffff;
+  border-radius: 16rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+  padding: 20rpx;
+}
+
+.route_header {
+  border-bottom: 1rpx solid #eeeeee;
+  padding-bottom: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.route_name {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333333;
+}
+
+.route_description {
+  font-size: 28rpx;
+  color: #888888;
+  margin-top: 10rpx;
+}
+
+.spots_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10rpx;
+}
+
+.spot_card {
+  background-color: #f9f9f9;
+  border-radius: 8rpx;
+  padding: 10rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 5rpx;
+}
+
+.spot_name {
+  font-size: 32rpx;
+  color: #333333;
+}
+
+.spot_location {
+  font-size: 24rpx;
+  color: #888888;
+}

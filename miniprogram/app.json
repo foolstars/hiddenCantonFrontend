@@ -1,9 +1,11 @@
 {
   "pages": [
+    "pages/homepage/homepage",
     "pages/index/index",
+    "pages/routeDetail/routeDetail",
+    "pages/user-center/index",
     "pages/goods-list/index",
     "pages/examples/index",
-    "pages/user-center/index",
     "pages/exampleDetail/index",
     "pages/deployService/index",
     "pages/updateRecord/index",
@@ -17,7 +19,7 @@
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTitleText": "The Hidden Canton",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
@@ -29,16 +31,10 @@
     "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "快速开始",
+        "pagePath": "pages/homepage/homepage",
+        "text": "首页",
         "iconPath": "images/icons/home.png",
         "selectedIconPath": "images/icons/home-active.png"
-      },
-      {
-        "pagePath": "pages/examples/index",
-        "text": "云开发示例",
-        "iconPath": "images/icons/examples.png",
-        "selectedIconPath": "images/icons/examples-active.png"
       },
       {
         "pagePath": "pages/user-center/index",

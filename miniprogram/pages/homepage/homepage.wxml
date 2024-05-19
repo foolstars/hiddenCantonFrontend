@@ -1,0 +1,20 @@
+<view class="page_container">
+  <view class="routes_container">
+    <block wx:for="{{routes}}" wx:key="id">
+      <view class="route_card" data-id="{{item.id}}" bindtap="navigateToRouteDetail">
+        <view class="route_header">
+          <text class="route_name">{{item.name}}</text>
+          <text class="route_description">{{item.description}}</text>
+        </view>
+        <view class="spots_container">
+          <block wx:for="{{spots[item.id]}}" wx:key="id">
+            <view class="spot_card">
+              <text class="spot_name">{{item.name}}</text>
+              <text class="spot_location">{{item.location}}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
